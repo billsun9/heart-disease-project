@@ -1,7 +1,5 @@
-# -*- coding: utf-8 -*-
-"""
-Created on Sat May 30 18:43:32 2020
-
-@author: bsun6
-"""
-
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
