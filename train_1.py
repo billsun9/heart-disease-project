@@ -18,6 +18,8 @@ Only 14 attributes used:
 13. #51 (thal)
 14. #58 (num) (the predicted attribute)
 '''
+# %%
+# load dataset
 names = ['age', 'sex', 'cp', 'trestbps', 'chol', 'fbs', 'restecg', 'thalach', 'exang', 'oldpeak', 'slope', 'ca', 'thal', 'num']
 data = pd.read_csv('data.csv', header=None, names=names)
 #%% data preprocessing
@@ -31,7 +33,6 @@ data['ca']=data['ca'].fillna(round(ca_mean))
 data['thal'] = data['thal'].astype(float)
 thal_mean = data.loc[~(data['thal'].isnull())]['thal'].mean()
 data['thal']=data['thal'].fillna(round(thal_mean))
-
 # %% train/val split
 from sklearn.model_selection import train_test_split
 dataset = data.values
@@ -52,7 +53,7 @@ from sklearn.neighbors import KNeighborsClassifier
 from sklearn.discriminant_analysis import LinearDiscriminantAnalysis
 from sklearn.naive_bayes import GaussianNB
 from sklearn.svm import SVC
-# %%
+# %% train and evaluate 6 sklearn models
 models = []
 models.append(('LR', LogisticRegression(solver='liblinear')))
 models.append(('LDA', LinearDiscriminantAnalysis()))
@@ -68,19 +69,17 @@ for name, model in models:
 	cv_results = cross_val_score(model, X_train, Y_train, cv=kfold, scoring='accuracy')
 	results.append(cv_results)
 	names.append(name)
-	print('%s: %f (%f)' % (name, cv_results.mean(), cv_results.std()))
-    
-# %%
+	print('%s: %f (%f)' % (name, cv_results.mean(), cv_results.std()))  
+# %% the best model was GaussianNB, so we retrain and test one more time on testing set
 model = GaussianNB()
 model.fit(X_train, Y_train)
 predictions = model.predict(X_test)
 # %%
-# Evaluate predictions
+# Evaluate predictions/performance
 print(accuracy_score(Y_test, predictions))
-# %%
 print(confusion_matrix(Y_test, predictions))
 print(classification_report(Y_test, predictions))
 # %%
-# save model
+# save model to models dir
 import joblib
 joblib.dump(model, 'models/gaussianModel.joblib')
