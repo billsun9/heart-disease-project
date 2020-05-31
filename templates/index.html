@@ -27,76 +27,93 @@
                     <p>
                         <div style="display:flex; flex-direction: row; justify-content: center; align-items: center">
                             <label for="age">Age:</label>
-                            <input type="number" name="age" id="age" min="0" max="100" required>
+                            <input type="number" name="age" id="age" min="0" max="100" placeholder="25" required>
                         </div>
                         
                         <div style="display:flex; flex-direction: row; justify-content: center; align-items: center">
                             <label for="sex">Sex:</label>
-                            <input type="number" name="sex" id="sex" min="0" max="1" required>  
+                            <select name="sex" id="sex" required>
+                                <option value="1">Male</option>
+                                <option value="0">Female</option>
+                            </select>
                         </div>
                         
                         <div style="display:flex; flex-direction: row; justify-content: center; align-items: center">
-                            <label for="cp">Cp:</label>
-                            <input type="number" name="cp" id="cp" min="1" max="4" required>
+                            <label for="cp">Chest Pain:</label>
+                            <select name="cp" id="cp" required>
+                                <option value="1">1: typical angina</option>
+                                <option value="2">2: atypical angina</option>
+                                <option value="3">3: non-anginal pain</option>
+                                <option value="4">4: asymptomatic</option>
+                            </select>
                         </div>
             
                         <div style="display:flex; flex-direction: row; justify-content: center; align-items: center">
-                            <label for="trestbps">Trestbps:</label>
-                            <input type="number" name="trestbps" id="trestbps" min="0" max="200" required>
-                        </div>
-                        
-            
-                        <div style="display:flex; flex-direction: row; justify-content: center; align-items: center">
-                            <label for="chol">Chol:</label>
-                            <input type="number" name="chol" id="chol" min="50" max="700" required>
-                        </div>
-                        
-            
-                        <div style="display:flex; flex-direction: row; justify-content: center; align-items: center">
-                            <label for="fbs">Fbs:</label>
-                            <input type="number" name="fbs" id="fbs" min="0" max="1" required>
+                            <label for="trestbps">Resting blood pressure:</label>
+                            <input type="number" name="trestbps" id="trestbps" min="50" max="200" placeholder="88" required>
                         </div>
                         
+                        <div style="display:flex; flex-direction: row; justify-content: center; align-items: center">
+                            <label for="chol">Serum Cholesterol:</label>
+                            <input type="number" name="chol" id="chol" min="50" max="700" placeholder="250" required>
+                        </div>                        
             
                         <div style="display:flex; flex-direction: row; justify-content: center; align-items: center">
-                            <label for="restecg">Restecg:</label>
-                            <input type="number" name="restecg" id="restecg" min="0" max="2" required>
-                        </div>
-                        
+                            <label for="fbs">Fasting Blood Sugar:</label>
+                            <select name="fbs" id="fbs" required>
+                                <option value="1">fasting blood sugar > 120 mg/dl</option>
+                                <option value="0">fasting blood sugar <= 120 mg/dl</option>
+                            </select>
+                        </div>                        
             
                         <div style="display:flex; flex-direction: row; justify-content: center; align-items: center">
-                            <label for="thalach">Thalach:</label>
-                            <input type="number" name="thalach" id="thalach" min="0" max="250" required>
-                        </div>
-                        
+                            <label for="restecg">Resting ECG Results:</label>
+                            <select name="restecg" id="restecg" required>
+                                <option value="0">Normal</option>
+                                <option value="1">ST-T wave abnormality</option>
+                                <option value="2">probable left ventricular hypertrophy</option>
+                            </select>
+                        </div>                        
             
                         <div style="display:flex; flex-direction: row; justify-content: center; align-items: center">
-                            <label for="exang">Exang:</label>
-                            <input type="number" name="exang" id="exang" min="0" max="1" required>
-                        </div>
-                        
+                            <label for="thalach">Max Heart Rate:</label>
+                            <input type="number" name="thalach" id="thalach" min="50" max="250" placeholder="192" required>
+                        </div>                        
             
                         <div style="display:flex; flex-direction: row; justify-content: center; align-items: center">
-                            <label for="oldpeak">Oldpeak:</label>
-                            <input type="number" name="oldpeak" id="oldpeak" min="0" max="10" required>
-                        </div>
-                        
+                            <label for="exang">Exercise Induced Angina:</label>
+                            <select name="exang" id="exang" required>
+                                <option value="1">Yes</option>
+                                <option value="0">No</option>
+                            </select>
+                        </div>                  
             
                         <div style="display:flex; flex-direction: row; justify-content: center; align-items: center">
-                            <label for="slope">Slope:</label>
-                            <input type="number" name="slope" id="slope" min="0" max="3" required>
-                        </div>
-                        
+                            <label for="oldpeak">ST depression:</label>
+                            <input type="number" name="oldpeak" id="oldpeak" min="0" max="10" placeholder="2" required>
+                        </div>                        
             
                         <div style="display:flex; flex-direction: row; justify-content: center; align-items: center">
-                            <label for="ca">Ca:</label>
-                            <input type="number" name="ca" id="ca" min="0" max="3" required>
-                        </div>
-                        
+                            <label for="slope">Slope of ST segment:</label>
+                            <select name="slope" id="slope" required>
+                                <option value="1">1: upsloping</option>
+                                <option value="2">2: flat</option>
+                                <option value="3">3: downsloping</option>
+                            </select>
+                        </div>                       
             
                         <div style="display:flex; flex-direction: row; justify-content: center; align-items: center">
-                            <label for="thal">Thal:</label>
-                            <input type="number" name="thal" id="thal" min="0" max="10" required>
+                            <label for="ca">Number of Vessels colored by flourosopy</label>
+                            <input type="number" name="ca" id="ca" min="0" max="3" placeholder="0" required>
+                        </div>                       
+            
+                        <div style="display:flex; flex-direction: row; justify-content: center; align-items: center">
+                            <label for="thal">Thalassemia (inherited heart disease): </label>
+                            <select name="thal" id="thal" required>
+                                <option value="3">normal</option>
+                                <option value="6">fixed defect</option>
+                                <option value="7">reversable defect</option>
+                            </select>
                         </div>
                         
                     </p>
