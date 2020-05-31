@@ -35,6 +35,8 @@ header {
     margin: 0 2%;
     border: 2px black solid;
     width: 100%;
+    border-radius: 5px;
+    background-color: #f2f2f2;
 }
 .var-name {
     color: rgb(80, 79, 79);
@@ -48,7 +50,7 @@ header {
     border: 1px black solid;
     text-align: center;
     color: white;
-    background: rgb(22, 190, 190);
+    background: rgb(160, 236, 236);
     cursor: pointer;
 }
 .var-info {
@@ -60,8 +62,8 @@ header {
 .vars-info p {
     padding: 1%;
     font-size: 18px;
-    color: rgba(255, 255, 255, 0.842);
-    background: rgb(35, 216, 216);
+    color: rgb(43, 66, 97);
+    background: rgb(170, 226, 226);
 }
 
 input[type=number], select {
