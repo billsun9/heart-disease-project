@@ -4,56 +4,177 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Heart Disease Predictor</title>
-    <link rel="stylesheet" href="../static/styles.css">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static',filename='styles/index.css') }}">
 </head>
 <body>
     <div class="wrapper">
-        <div class="questions">
-            <h2></h2>
-            <form action="/results" method="POST">
-                <p>
-                    <label for="age">Age:</label>
-                    <input type="number" name="age" id="age" min="0" max="100">
-        
-                    <label for="sex">Sex:</label>
-                    <input type="number" name="sex" id="sex" min="0" max="1">
-        
-                    <label for="cp">Cp:</label>
-                    <input type="number" name="cp" id="cp" min="1" max="4">
-        
-                    <label for="trestbps">Trestbps:</label>
-                    <input type="number" name="trestbps" id="trestbps" min="0" max="200">
-        
-                    <label for="chol">Chol:</label>
-                    <input type="number" name="chol" id="chol" min="50" max="700">
-        
-                    <label for="fbs">Fbs:</label>
-                    <input type="number" name="fbs" id="fbs" min="0" max="1">
-        
-                    <label for="restecg">Restecg:</label>
-                    <input type="number" name="restecg" id="restecg" min="0" max="2">
-        
-                    <label for="thalach">Thalach:</label>
-                    <input type="number" name="thalach" id="thalach" min="0" max="250">
-        
-                    <label for="exang">Exang:</label>
-                    <input type="number" name="exang" id="exang" min="0" max="1">
-        
-                    <label for="oldpeak">Oldpeak:</label>
-                    <input type="number" name="oldpeak" id="oldpeak" min="0" max="10">
-        
-                    <label for="slope">Slope:</label>
-                    <input type="number" name="slope" id="slope" min="0" max="3">
-        
-                    <label for="ca">Ca:</label>
-                    <input type="number" name="ca" id="ca" min="0" max="3">
-        
-                    <label for="thal">Thal:</label>
-                    <input type="number" name="thal" id="thal" min="0" max="10">
-                </p>
-                <input type="submit" value="Submit">
-            </form>
+        <header>
+            Machine Learning-based Heart Disease Diagnosis
+        </header>
+        <div class="info">
+            <div class="gen-info">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Officiis aliquid voluptatum ex nisi eveniet qui modi doloremque quaerat sed eum cumque delectus optio blanditiis quam minus, sint perspiciatis vero. Totam quaerat dolores, perferendis aut ea, necessitatibus sapiente alias hic eligendi inventore vero adipisci officiis, voluptate at qui ullam ducimus expedita odio minima illum ut libero magni? Nulla explicabo commodi odit 
+                <br><br>perferendis necessitatibus mollitia, delectus blanditiis nisi, aliquam, pariatur accusantium libero minus inventore expedita impedit non quia dolorem illum. Architecto quis debitis vitae explicabo doloribus, molestias necessitatibus quaerat. Repellendus deserunt ratione necessitatibus aliquid optio eveniet inventore sunt facilis labore totam, harum earum neque natus ipsa quo cum dignissimos illum assumenda voluptate! Totam vitae veniam voluptatum itaque, veritatis omnis. Explicabo ullam ut fugit unde, pariatur reiciendis itaque fuga, aut alias rem sequi magni ipsam in corporis incidunt repudiandae consectetur voluptate, eaque accusantium.
+            </div>
+        </div>
+        <div class="questions-and-vars">
+            <div class="questions">
+                <h2></h2>
+                <form action="/results" method="POST">
+                    <p>
+                        <div style="display:flex; flex-direction: row; justify-content: center; align-items: center">
+                            <label for="age">Age:</label>
+                            <input type="number" name="age" id="age" min="0" max="100">
+                        </div>
+                        
+                        <div style="display:flex; flex-direction: row; justify-content: center; align-items: center">
+                            <label for="sex">Sex:</label>
+                            <input type="number" name="sex" id="sex" min="0" max="1">  
+                        </div>
+                        
+                        <div style="display:flex; flex-direction: row; justify-content: center; align-items: center">
+                            <label for="cp">Cp:</label>
+                            <input type="number" name="cp" id="cp" min="1" max="4">
+                        </div>
+            
+                        <div style="display:flex; flex-direction: row; justify-content: center; align-items: center">
+                            <label for="trestbps">Trestbps:</label>
+                            <input type="number" name="trestbps" id="trestbps" min="0" max="200">
+                        </div>
+                        
+            
+                        <div style="display:flex; flex-direction: row; justify-content: center; align-items: center">
+                            <label for="chol">Chol:</label>
+                            <input type="number" name="chol" id="chol" min="50" max="700">
+                        </div>
+                        
+            
+                        <div style="display:flex; flex-direction: row; justify-content: center; align-items: center">
+                            <label for="fbs">Fbs:</label>
+                            <input type="number" name="fbs" id="fbs" min="0" max="1">
+                        </div>
+                        
+            
+                        <div style="display:flex; flex-direction: row; justify-content: center; align-items: center">
+                            <label for="restecg">Restecg:</label>
+                            <input type="number" name="restecg" id="restecg" min="0" max="2">
+                        </div>
+                        
+            
+                        <div style="display:flex; flex-direction: row; justify-content: center; align-items: center">
+                            <label for="thalach">Thalach:</label>
+                            <input type="number" name="thalach" id="thalach" min="0" max="250">
+                        </div>
+                        
+            
+                        <div style="display:flex; flex-direction: row; justify-content: center; align-items: center">
+                            <label for="exang">Exang:</label>
+                            <input type="number" name="exang" id="exang" min="0" max="1">
+                        </div>
+                        
+            
+                        <div style="display:flex; flex-direction: row; justify-content: center; align-items: center">
+                            <label for="oldpeak">Oldpeak:</label>
+                            <input type="number" name="oldpeak" id="oldpeak" min="0" max="10">
+                        </div>
+                        
+            
+                        <div style="display:flex; flex-direction: row; justify-content: center; align-items: center">
+                            <label for="slope">Slope:</label>
+                            <input type="number" name="slope" id="slope" min="0" max="3">
+                        </div>
+                        
+            
+                        <div style="display:flex; flex-direction: row; justify-content: center; align-items: center">
+                            <label for="ca">Ca:</label>
+                            <input type="number" name="ca" id="ca" min="0" max="3">
+                        </div>
+                        
+            
+                        <div style="display:flex; flex-direction: row; justify-content: center; align-items: center">
+                            <label for="thal">Thal:</label>
+                            <input type="number" name="thal" id="thal" min="0" max="10">
+                        </div>
+                        
+                    </p>
+                    <input type="submit" value="Submit">
+                </form>
+            </div>
+            <div class="vars-info">
+                <h2 style="text-align: center; padding: 3%; font-family: Arial, Helvetica, sans-serif; background: rgb(22, 190, 190);">Brief description of the input variables:</h2>
+                <div class="var-age">
+                    <h2 class="var-name">Age</h2>
+                    <p class="var-info">age in years</p>
+                </div>
+                <div class="var-sex">
+                    <h2 class="var-name">Sex</h2>
+                    <p class="var-info">sex (1 = male; 0 = female)</p>
+                </div>
+                <div class="var-cp">
+                    <h2 class="var-name">Chest Pain Type</h2>
+                    <p class="var-info">
+                    chest pain type
+                    -- Value 1: typical angina
+                    -- Value 2: atypical angina
+                    -- Value 3: non-anginal pain
+                    -- Value 4: asymptomatic
+                    </p>
+                </div>
+                <div class="var-trestbps">
+                    <h2 class="var-name">Resting Blood Pressure</h2>
+                    <p class="var-info">resting blood pressure (in mm Hg on admission to the hospital)</p>
+                </div>
+                <div class="var-chol">
+                    <h2 class="var-name">Cholesterol</h2>
+                    <p class="var-info">serum cholestoral in mg/dl</p>
+                </div>
+                <div class="var-fbs">
+                    <h2 class="var-name">Fasting Blood sugar</h2>
+                    <p class="var-info">(fasting blood sugar > 120 mg/dl) (1 = true; 0 = false)</p>
+                </div>
+                <div class="var-restecg">
+                    <h2 class="var-name">Resting electrocardiographic (ECG) results</h2>
+                    <p class="var-info">
+                        -- Value 0: normal
+                        -- Value 1: having ST-T wave abnormality (T wave inversions and/or ST elevation or depression of > 0.05 mV)
+                        -- Value 2: showing probable or definite left ventricular hypertrophy by Estes' criteria
+                    </p>
+                </div>
+                <div class="var-thalach">
+                    <h2 class="var-name">maximum heart rate achieved</h2>
+                    <p class="var-info">maximum heart rate achieved</p>
+                </div>
+                <div class="var-exang">
+                    <h2 class="var-name">exercise induced angina</h2>
+                    <p class="var-info">exercise induced angina (1 = yes, 0 = no)</p>
+                </div>
+                <div class="var-oldpeak">
+                    <h2 class="var-name">Oldpeak</h2>
+                    <p class="var-info">ST depression induced by exercise relative to rest</p>
+                </div>
+                <div class="var-slope">
+                    <h2 class="var-name">Slope</h2>
+                    <p class="var-info">
+                    slope: the slope of the peak exercise ST segment
+                    -- Value 1: upsloping
+                    -- Value 2: flat
+                    -- Value 3: downsloping
+                    </p>
+                </div>
+                <div class="var-ca">
+                    <h2 class="var-name">ca</h2>
+                    <p class="var-info">number of major vessels (0-3) colored by flourosopy</p>
+                </div>
+                <div class="var-thal">
+                    <h2 class="var-name">thal</h2>
+                    <p class="var-info">
+                        3 = normal; 6 = fixed defect; 7 = reversable defect
+                    </p>
+                </div>
+    
+            </div>
         </div>
     </div>
+    <script src="{{ url_for('static',filename='js/app.js') }}"></script>
 </body>
 </html>
