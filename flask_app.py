@@ -29,8 +29,13 @@ def results():
         thal = request.form['thal']
         # reshapes user input
         input = np.array((float(age), float(sex), float(cp), float(trestbps), float(chol), float(fbs), float(restecg), float(thalach), float(exang), float(oldpeak), float(slope), float(ca), float(thal)))
-        input = np.expand_dims(input, axis=0) # reshapes from (14,) to (1,14)
+        input = np.expand_dims(input, axis=0) # reshapes from (13,) to (1,13)
         prediction = model.predict(input)
-        return render_template("results.html", pred = prediction)
+        
+        if np.array_equal(np.array([1], dtype='int32'), prediction.astype('int32')):
+            message = "You don't have it!"
+        else:
+            message = "You do have it! :("
+        return render_template("results.html", message = message)
 if __name__ == '__main__':
     app.run(debug=False)
