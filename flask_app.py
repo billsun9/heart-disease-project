@@ -33,9 +33,11 @@ def results():
         prediction = model.predict(input)
         
         if np.array_equal(np.array([1], dtype='int32'), prediction.astype('int32')):
-            message = "You don't have it!"
+            pred = "High risk for heart disease"
+            message = "The machine learning model predicted that you are at high risk of contracting heart disease. As heart disease is often life-threatening, you should take action to reduce your risk. Although some risk factors, like age, gender, race, and family history cannot be changed, you are able to change your lifestyle. You chould control your blood pressure, cholesterol, and triglyceride levels. You should also stay at a healthy weight. You should also eat a healthy diet."
         else:
-            message = "You do have it! :("
-        return render_template("results.html", message = message)
+            pred = "Low risk for heart disease"
+            message = "The machine learning model predicted that you are at low risk of contracting heart disease. However, as heart disease is often life-threatening, you should still take action to reduce your risk. Although some risk factors, like age, gender, race, and family history cannot be changed, you are able to change your lifestyle. You chould control your blood pressure, cholesterol, and triglyceride levels. You should also stay at a healthy weight. You should also eat a healthy diet."
+        return render_template("results.html", pred = pred, message = message)
 if __name__ == '__main__':
     app.run(debug=False)

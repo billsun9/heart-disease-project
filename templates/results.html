@@ -4,10 +4,49 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Model Predictions</title>
-    <link rel="stylesheet" type="text/css" href="{{ url_for('static',filename='styles/results.css') }}">
+    <!--<link rel="stylesheet" type="text/css" href="{{ url_for('static',filename='styles/results.css') }}">-->
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            min-height: 100vh;
+            background-image: linear-gradient(240deg,rgb(47,150,163), rgb(48,62,143));
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
+            align-items: center;
+            font-family: sans-serif;
+            color: white;
+        }
+
+        .diagnosis {
+            margin: 20px;
+        }
+        .message {
+            margin: 20px;
+        }
+        .wrapper {
+            margin: 0 15%;
+        }
+        a {
+            color: white;
+        }
+    </style>
 </head>
 <body>
-    <h1>Predictions from the models:</h1>
-    <p>{{ message }}</p>
+    <div class="wrapper">
+        <h1>Predictions from the models:</h1>
+        <p class="diagnosis" style="font-size: 28px; font-weight: bold;">
+            Diagnosis: {{ pred }}
+        </p>
+        <p class="message" style="font-size: 18px;">
+            {{ message }}
+        </p>
+        <a href="/">Return Home!</a>
+    </div>
 </body>
 </html>

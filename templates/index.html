@@ -13,8 +13,11 @@
         </header>
         <div class="info">
             <div class="gen-info">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Officiis aliquid voluptatum ex nisi eveniet qui modi doloremque quaerat sed eum cumque delectus optio blanditiis quam minus, sint perspiciatis vero. Totam quaerat dolores, perferendis aut ea, necessitatibus sapiente alias hic eligendi inventore vero adipisci officiis, voluptate at qui ullam ducimus expedita odio minima illum ut libero magni? Nulla explicabo commodi odit 
-                <br><br>perferendis necessitatibus mollitia, delectus blanditiis nisi, aliquam, pariatur accusantium libero minus inventore expedita impedit non quia dolorem illum. Architecto quis debitis vitae explicabo doloribus, molestias necessitatibus quaerat. Repellendus deserunt ratione necessitatibus aliquid optio eveniet inventore sunt facilis labore totam, harum earum neque natus ipsa quo cum dignissimos illum assumenda voluptate! Totam vitae veniam voluptatum itaque, veritatis omnis. Explicabo ullam ut fugit unde, pariatur reiciendis itaque fuga, aut alias rem sequi magni ipsam in corporis incidunt repudiandae consectetur voluptate, eaque accusantium.
+                Heart disease describes a range of conditions that affect your heart. Diseases under the heart disease umbrella include blood vessel diseases, such as coronary artery disease; heart rhythm problems (arrhythmias); and heart defects you're born with (congenital heart defects), among others.
+                <br><br>
+                Heart disease is the <b>leading cause of death</b> for men, women, and people of most racial and ethnic groups in the United States. According to the CDC, about 647,000 Americans die from heart disease each year—that’s 1 in every 4 deaths.
+                <br><br>
+                In this project, I developed a Machine Learning-based means of diagnosing whether or not a patient is at risk of having heart disease. Specifically, I used heart disease data collected by the Long Beach and Cleveland Clinic Foundation to train and test 6 different machine learning algorithms. Upon evaluation, the Gaussian Naive Bayes algorithm achieved the highest diagnostic performance at approximately 90% accuracy.
             </div>
         </div>
         <div class="questions-and-vars">
@@ -24,76 +27,76 @@
                     <p>
                         <div style="display:flex; flex-direction: row; justify-content: center; align-items: center">
                             <label for="age">Age:</label>
-                            <input type="number" name="age" id="age" min="0" max="100">
+                            <input type="number" name="age" id="age" min="0" max="100" required>
                         </div>
                         
                         <div style="display:flex; flex-direction: row; justify-content: center; align-items: center">
                             <label for="sex">Sex:</label>
-                            <input type="number" name="sex" id="sex" min="0" max="1">  
+                            <input type="number" name="sex" id="sex" min="0" max="1" required>  
                         </div>
                         
                         <div style="display:flex; flex-direction: row; justify-content: center; align-items: center">
                             <label for="cp">Cp:</label>
-                            <input type="number" name="cp" id="cp" min="1" max="4">
+                            <input type="number" name="cp" id="cp" min="1" max="4" required>
                         </div>
             
                         <div style="display:flex; flex-direction: row; justify-content: center; align-items: center">
                             <label for="trestbps">Trestbps:</label>
-                            <input type="number" name="trestbps" id="trestbps" min="0" max="200">
+                            <input type="number" name="trestbps" id="trestbps" min="0" max="200" required>
                         </div>
                         
             
                         <div style="display:flex; flex-direction: row; justify-content: center; align-items: center">
                             <label for="chol">Chol:</label>
-                            <input type="number" name="chol" id="chol" min="50" max="700">
+                            <input type="number" name="chol" id="chol" min="50" max="700" required>
                         </div>
                         
             
                         <div style="display:flex; flex-direction: row; justify-content: center; align-items: center">
                             <label for="fbs">Fbs:</label>
-                            <input type="number" name="fbs" id="fbs" min="0" max="1">
+                            <input type="number" name="fbs" id="fbs" min="0" max="1" required>
                         </div>
                         
             
                         <div style="display:flex; flex-direction: row; justify-content: center; align-items: center">
                             <label for="restecg">Restecg:</label>
-                            <input type="number" name="restecg" id="restecg" min="0" max="2">
+                            <input type="number" name="restecg" id="restecg" min="0" max="2" required>
                         </div>
                         
             
                         <div style="display:flex; flex-direction: row; justify-content: center; align-items: center">
                             <label for="thalach">Thalach:</label>
-                            <input type="number" name="thalach" id="thalach" min="0" max="250">
+                            <input type="number" name="thalach" id="thalach" min="0" max="250" required>
                         </div>
                         
             
                         <div style="display:flex; flex-direction: row; justify-content: center; align-items: center">
                             <label for="exang">Exang:</label>
-                            <input type="number" name="exang" id="exang" min="0" max="1">
+                            <input type="number" name="exang" id="exang" min="0" max="1" required>
                         </div>
                         
             
                         <div style="display:flex; flex-direction: row; justify-content: center; align-items: center">
                             <label for="oldpeak">Oldpeak:</label>
-                            <input type="number" name="oldpeak" id="oldpeak" min="0" max="10">
+                            <input type="number" name="oldpeak" id="oldpeak" min="0" max="10" required>
                         </div>
                         
             
                         <div style="display:flex; flex-direction: row; justify-content: center; align-items: center">
                             <label for="slope">Slope:</label>
-                            <input type="number" name="slope" id="slope" min="0" max="3">
+                            <input type="number" name="slope" id="slope" min="0" max="3" required>
                         </div>
                         
             
                         <div style="display:flex; flex-direction: row; justify-content: center; align-items: center">
                             <label for="ca">Ca:</label>
-                            <input type="number" name="ca" id="ca" min="0" max="3">
+                            <input type="number" name="ca" id="ca" min="0" max="3" required>
                         </div>
                         
             
                         <div style="display:flex; flex-direction: row; justify-content: center; align-items: center">
                             <label for="thal">Thal:</label>
-                            <input type="number" name="thal" id="thal" min="0" max="10">
+                            <input type="number" name="thal" id="thal" min="0" max="10" required>
                         </div>
                         
                     </p>
